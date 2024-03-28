@@ -29,7 +29,7 @@ body{
     height: 100%;
     position: fixed;
     background: linear-gradient(175deg,$pink-gradien,$purple-gradien);
-    animation: loader 15s;
+    animation: loader 6s;
     z-index: -5;
     opacity: 0;
 }
@@ -55,7 +55,7 @@ body{
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    animation: spin 5s linear;
+    animation: spin 2s linear;
     animation-iteration-count: 3;
 }
 @keyframes spin {
@@ -295,9 +295,9 @@ footer{
         filter: invert(1);
         @media (min-width: 1024px){
             width: 110px;
-            position: relative;
-            top: 10px;
-            left: 63%;
+            position: absolute;
+            top: 20px;
+            left: 90%;
         }
     }
     .footer-container{
