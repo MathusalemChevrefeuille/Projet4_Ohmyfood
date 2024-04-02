@@ -194,7 +194,7 @@ header .header-location {
 }
 @media (min-width: 1024px) {
   .restaurants {
-    padding: 0 180px 0 180px;
+    padding: 0 180px 40px 180px;
   }
 }
 .restaurants h1 {
@@ -268,6 +268,7 @@ header .header-location {
   right: 1em;
   bottom: 10%;
   opacity: 0;
+  transition: all 1000ms;
 }
 .restaurants .restaurants-container-cards .restaurants-card .heartfull:hover {
   opacity: 1;

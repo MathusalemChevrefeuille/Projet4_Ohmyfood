@@ -196,7 +196,7 @@ header{
     padding: 30px 0 66px 0;
     background-color: $light-grey;
     @media (min-width: 1024px){
-    padding: 0 180px 0 180px;
+    padding: 0 180px 40px 180px;
     }
     h1{
         margin: 40px 20px 0 20px;
@@ -267,6 +267,7 @@ header{
                 right: 1em;
                 bottom: 10%;
                 opacity: 0;
+                transition: all 1000ms;
             }
             .heartfull:hover{
                 opacity: 1;
