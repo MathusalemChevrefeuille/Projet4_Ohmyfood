@@ -18,6 +18,14 @@ $menu-item_width: 98%;
   }
 }
 
+body{
+    margin: 0;
+}
+
+a{ 
+    text-decoration: none;
+   }
+
 /* header*/
 
 
@@ -65,22 +73,11 @@ header{
     flex-direction: column;
     justify-content: center;
     gap: 40px;
-    @media (min-width: 1024px){
-        margin: 0 130px -63px 130px;
-        padding: 0 15% 0 15%;
-    }
     .title-menu{
         display: flex;
         flex-direction: row;
         position: relative;
         gap: 15px;
-        @media (min-width: 1024px){
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        gap: 25px;
-        padding-top: 25px;
-        }
         h1{
             font-family: Shrikhand, cursive;
             font-size: 28px;
@@ -88,10 +85,6 @@ header{
             margin-left: 15px;
             padding-top: 25px;
             white-space: nowrap;
-            @media (min-width: 1024px){
-                position: relative;
-                left: 2em;
-            }
         }
         .heartempty{
             width: 22px;
@@ -99,9 +92,6 @@ header{
             position: relative;
             top: 3.5em;
             margin-right: 30px;
-            @media (min-width: 1024px){
-                left: 3em;
-            }
         }
         .heartempty:hover{
             opacity: 0;
@@ -115,9 +105,6 @@ header{
             margin-right: 30px;
             opacity: 0;
             transition: all 1000ms;
-            @media (min-width: 1024px){
-                right: 1.81em;
-            }
         }
         .heartfull:hover{
             opacity: 1;
@@ -143,7 +130,7 @@ header{
         }
         .menu-card-background {
             background-color: rgba($light-green, 0);
-            border-radius: 25px;
+            border-radius: 15px;
             width: 100%;
             height: 100%;
             transition: all 300ms;
@@ -153,7 +140,7 @@ header{
                 background-color: rgba($light-green, 1);
             }
             &:hover .menu-card {
-                border-radius: 25px 0 0 25px;
+                border-radius: 15px 0 0 15px;
                 width: calc($menu-item_width - 70px);
                 }
             &:hover .check span {
@@ -173,10 +160,10 @@ header{
         }
             .menu-card {
                 background-color: white;
-                border-radius: 25px;
+                border-radius: 15px;
                 box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10);
                 padding: 10px 0 10px 15px;
-                width: $menu-item_width;
+                width: 95%;
                 transition: all 300ms;
                 display: flex;
                 position: relative;
@@ -281,40 +268,20 @@ footer{
     background-color: $dark-grey;
     padding: 25px;
     line-height: 30px;
-    @media (min-width: 1024px){
-        flex-direction: row;
-        justify-content: center;
-        position: relative;
-    }
     img{
         width: 137px;
         margin-bottom: 16px;
         padding: 10px 10px 10px 0;
         filter: invert(1);
-        @media (min-width: 1024px){
-            width: 110px;
-            position: absolute;
-            top: 20px;
-            left: 90%;
-        }
     }
     .footer-container{
         display: flex;
         flex-direction: column;
         gap: 7px;
-        @media (min-width: 1024px){
-            flex-direction: row;
-            align-items: center;
-            position: relative;
-            left: 8%;
-        }
         .icon-txt{
             display: grid;
             grid-template-columns: 15px 1fr;
             gap: 10px;
-            @media (min-width: 1024px){
-                display: flex;
-            }
             i{
                 align-self: center;
                 color: white;
@@ -328,17 +295,69 @@ footer{
         .footer-txt{
             display: flex;
             flex-direction: column;
-            @media (min-width: 1024px){
-                display: flex;
-                flex-direction: row;
-                gap: 10px;
-                margin-left: 30px;
-            }
-
             a{
                 color: white;
                 font-size: 16px;
                 font-weight: 300;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1024px){
+    .menu-container{
+        margin: 0 130px -63px 130px;
+        padding: 0 15% 0 15%;
+        .title-menu{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap: 25px;
+            padding-top: 25px;
+            h1{
+                position: relative;
+                left: 2em;
+            }
+            .heartempty{
+                left: 3em;
+            }
+            .heartfull{
+                right: 1.81em;
+            }
+        }
+        .menu-card-container{
+            .menu-card-background {
+                .menu-card {
+                    width: 98%;
+                }
+            }
+        }
+    }
+
+    footer{
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        img{
+            width: 110px;
+            position: absolute;
+            top: 20px;
+            left: 90%;
+        }
+        .footer-container{
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            left: 8%;
+            .icon-txt{
+                display: flex;
+            }
+            .footer-txt{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin-left: 30px;
             }
         }
     }

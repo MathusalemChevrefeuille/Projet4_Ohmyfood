@@ -29,7 +29,7 @@ body{
     height: 100%;
     position: fixed;
     background: linear-gradient(175deg,$pink-gradien,$purple-gradien);
-    animation: loader 6s;
+    animation: loader 3s;
     z-index: -5;
     opacity: 0;
 }
@@ -55,7 +55,7 @@ body{
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    animation: spin 2s linear;
+    animation: spin 1s linear;
     animation-iteration-count: 3;
 }
 @keyframes spin {
@@ -92,7 +92,7 @@ header{
         font-size: 16px;
         height: 50px;
         background-color: $grey;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     }
 }
 /* partie reservez*/
@@ -131,9 +131,6 @@ header{
 /* partie fonctionnement*/
 .fonctionnement{
     margin: 30px 0 65px 0;  
-    @media (min-width: 1024px){
-    padding: 0 180px 0 180px;
-    }
     h1{
         margin: 40px 20px 25px 20px
     }
@@ -141,16 +138,11 @@ header{
         display: flex;
         flex-direction: column;
         gap: 25px;
-        @media (min-width: 1024px){
-            display: grid;
-            grid-template-columns: 33% 33% 33%;
-            gap: 0;
-        }
         .fonctionnement-card{
             display: flex;
             flex-direction: row;
             background-color: $light-grey;
-            border-radius: 25px;
+            border-radius: 20px;
             padding: 10px;
             margin: 0 20px 0 32px;
             box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
@@ -172,10 +164,7 @@ header{
             i{
                 align-self: center;
                 color: #7E7E7E;
-                margin-right: 25px;      
-                @media (min-width: 1024px){
-                margin-right: 10px;
-                }
+                margin-right: 25px;
             }
             &:hover i{
             color: $purple;
@@ -195,9 +184,6 @@ header{
     flex-direction: column;
     padding: 30px 0 66px 0;
     background-color: $light-grey;
-    @media (min-width: 1024px){
-    padding: 0 180px 40px 180px;
-    }
     h1{
         margin: 40px 20px 0 20px;
     }
@@ -206,12 +192,6 @@ header{
         flex-direction: column;
         gap: 18px;
         margin: 18px;
-        @media (min-width: 1024px){
-            display: grid ;
-            grid-template-columns: 49% 49% ;
-            row-gap: 50px;
-            column-gap: 80px;
-        }
         a{
             position: relative;
         }
@@ -284,40 +264,20 @@ footer{
     background-color: $dark-grey;
     padding: 25px;
     line-height: 30px;
-    @media (min-width: 1024px){
-        flex-direction: row;
-        justify-content: center;
-        position: relative;
-    }
     img{
         width: 137px;
         margin-bottom: 16px;
         padding: 10px 10px 10px 0;
         filter: invert(1);
-        @media (min-width: 1024px){
-            width: 110px;
-            position: absolute;
-            top: 20px;
-            left: 90%;
-        }
     }
     .footer-container{
         display: flex;
         flex-direction: column;
         gap: 7px;
-        @media (min-width: 1024px){
-            flex-direction: row;
-            align-items: center;
-            position: relative;
-            left: 8%;
-        }
         .icon-txt{
             display: grid;
             grid-template-columns: 15px 1fr;
             gap: 10px;
-            @media (min-width: 1024px){
-                display: flex;
-            }
             i{
                 align-self: center;
                 color: white;
@@ -331,13 +291,6 @@ footer{
         .footer-txt{
             display: flex;
             flex-direction: column;
-            @media (min-width: 1024px){
-                display: flex;
-                flex-direction: row;
-                gap: 10px;
-                margin-left: 30px;
-            }
-
             a{
                 color: white;
                 font-size: 16px;
@@ -345,4 +298,60 @@ footer{
             }
         }
     }
+}
+
+
+@media (min-width: 1024px){
+
+    .fonctionnement{
+        padding: 0 180px 0 180px;
+        .container-fonctionnement-card{
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            gap: 0;
+            .fonctionnement-card{
+                i{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .restaurants{
+        padding: 0 180px 40px 180px;
+        .restaurants-container-cards{
+            display: grid ;
+            grid-template-columns: 49% 49% ;
+            row-gap: 50px;
+            column-gap: 80px;
+        }
+    }
+
+    footer{
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        img{
+            width: 110px;
+            position: absolute;
+            top: 20px;
+            left: 90%;
+        }
+        .footer-container{
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            left: 8%;
+            .icon-txt{
+                display: flex;
+            }
+            .footer-txt{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin-left: 30px;
+            }
+        }
+    }
+
 }
